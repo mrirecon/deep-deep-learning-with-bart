@@ -1,0 +1,8 @@
+# Dimensions
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 
+# Command
+measure --psnr /tmp/tmp.hre1xo5GqA/cim /scratch/mblum/bart_nn_data_auto_zenodo//02_vn_data/coronal_pd_fs/eval/ref_ali_fil /home/mblum/DeepDeepLearning5/Figure_05/measures/modl_2map_psnr 
+# Files
+ >/home/mblum/DeepDeepLearning5/Figure_05/measures/modl_2map_psnr </scratch/mblum/bart_nn_data_auto_zenodo//02_vn_data/coronal_pd_fs/eval/ref_ali_fil </tmp/tmp.hre1xo5GqA/cim
+# Creator
+BART v0.7.00-404-g50dce7d

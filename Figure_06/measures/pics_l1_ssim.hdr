@@ -1,0 +1,8 @@
+# Dimensions
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 
+# Command
+measure --ssim out /scratch/mblum/bart_nn_data_auto_zenodo/02_vn_data/coronal_pd_fs/eval/ref /home/mblum/DeepDeepLearning5/Figure_06/measures/pics_l1_ssim 
+# Files
+ >/home/mblum/DeepDeepLearning5/Figure_06/measures/pics_l1_ssim </scratch/mblum/bart_nn_data_auto_zenodo/02_vn_data/coronal_pd_fs/eval/ref <out
+# Creator
+BART v0.7.00-404-g50dce7d
