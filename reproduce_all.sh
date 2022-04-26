@@ -14,7 +14,7 @@ bash 02_scripts/03_load_example_data.sh
 
 # Preprocess training data
 bash 02_scripts/11_preprocess_vn_data.sh
-python3 02_scripts/12_preprocess_modl_data.sh
+python3 02_scripts/12_preprocess_modl_data.py
 
 # Train networks
 bash 12_varnet/train_all.sh
