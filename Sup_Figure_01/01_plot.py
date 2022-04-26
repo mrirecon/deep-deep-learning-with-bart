@@ -27,7 +27,7 @@ def plot(outfile):
     x = np.linspace(0,30,31)
     lin=ax1.plot(x, np.mean(bart_test[:,3,:],axis=-1), label="BART (PSNR)")
     ax1.plot([], [], label="BART (SSIM)", color=lin[0].get_color(), ls="dashed")
-    lin=ax1.plot(x, np.mean(tf_test[:,3,:],axis=-1), label="TensorFlow")
+    lin=ax1.plot(x, np.mean(tf_test[:,3,:],axis=-1), label="TensorFlow (PSNR)")
     ax1.plot([], [], label="TensorFlow (SSIM)", color=lin[0].get_color(), ls="dashed")
 
     ax1.set_ylim(27,37)
