@@ -56,21 +56,21 @@ def plot(outfile):
     #axes[1,0].set_title("Adjoint")
 
 
-    axes[1,1].imshow(np.abs(out_pics - ref), vmin = 0, vmax=.05*scale, cmap="gray")
+    axes[1,1].imshow(np.abs(out_pics - ref), vmin = 0, vmax=.10*scale, cmap="gray")
     ssim=calc_ssim(out_pics, ref)
     psnr=10*np.log10(np.max(np.abs(ref))**2/np.mean(np.abs(np.abs(out_pics) -np.abs(ref))**2))
     #axes[1,1].set_title("PSNR={:.1f}; SSIM={:.2f}".format(psnr, ssim))
     axes[0,1].text(0, 230, "PSNR={:.1f}\nSSIM={:.2f}".format(psnr, ssim), color="white", fontsize=12)
 
 
-    axes[1,2].imshow(np.abs(out_tf- ref), vmin = 0, vmax=.05*scale, cmap="gray")
+    axes[1,2].imshow(np.abs(out_tf- ref), vmin = 0, vmax=.10*scale, cmap="gray")
     ssim=calc_ssim(out_tf, ref)
     psnr=10*np.log10(np.max(np.abs(ref))**2/np.mean(np.abs(np.abs(out_tf) - np.abs(ref))**2))
     #axes[1,2].set_title("PSNR={:.1f}; SSIM={:.2f}".format(psnr, ssim))
     axes[0,2].text(0, 230, "PSNR={:.1f}\nSSIM={:.2f}".format(psnr, ssim), color="white", fontsize=12)
 
 
-    axes[1,3].imshow(np.abs(out_bart-ref), vmin = 0, vmax=.05*scale, cmap="gray")
+    axes[1,3].imshow(np.abs(out_bart-ref), vmin = 0, vmax=.10*scale, cmap="gray")
     ssim=calc_ssim(out_bart, ref)
     psnr=10*np.log10(np.max(np.abs(ref))**2/np.mean(np.abs(np.abs(out_bart) -np.abs(ref))**2))
     #axes[1,3].set_title("PSNR={:.1f}; SSIM={:.2f}".format(psnr, ssim))
@@ -91,6 +91,10 @@ def plot(outfile):
     axes[1][4].set_xticklabels(["PICS", "TensorFlow", "BART"])
     for tick in axes[1][4].xaxis.get_major_ticks():
         tick.label.set_position((0,0.12))
+    
+    axes[1,1].text(230, 230, "x10", color="white", fontsize=12, ha='right', va='bottom')
+    axes[1,2].text(230, 230, "x10", color="white", fontsize=12, ha='right', va='bottom')
+    axes[1,3].text(230, 230, "x10", color="white", fontsize=12, ha='right', va='bottom')
 
     plt.savefig(outfile, dpi=600)
     plt.close()

@@ -91,6 +91,10 @@ def plot(outfile):
     for tick in axes[1][4].xaxis.get_major_ticks():
         tick.label.set_position((0,0.12))
 
+    axes[1,1].text(310, 310, "x10", color="white", fontsize=12, va='bottom', ha='right')
+    axes[1,2].text(310, 310, "x10", color="white", fontsize=12, va='bottom', ha='right')
+    axes[1,3].text(310, 310, "x10", color="white", fontsize=12, va='bottom', ha='right')
+
     plt.savefig(outfile, dpi=600)
     plt.close()
 
