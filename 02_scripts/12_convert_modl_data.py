@@ -48,14 +48,6 @@ for dataset in datasets:
     dataset["ref"] = np.reshape(dataset["ref"], dims_img)
     dataset["col"] = np.reshape(dataset["col"], dims_ksp)
 
-    dataset["ksp"] = dataset["col"] * dataset["ref"]
-
-    dataset["ksp"] = np.fft.ifftshift(dataset["ksp"], [0, 1])
-    dataset["ksp"] = np.fft.fft2(dataset["ksp"], axes=[0, 1])
-    dataset["ksp"] = np.fft.fftshift(dataset["ksp"], [0, 1])
-    dataset["ksp"] = dataset["ksp"] / np.sqrt(dims_ksp[0] * dims_ksp[1] * dims_ksp[2])
-    dataset["ksp"] = dataset["ksp"] + .01 / np.sqrt(2.) * (np.random.standard_normal(dims_ksp)+1j*np.random.standard_normal(dims_ksp))
-
     def move_batchdim(x):
 
         new_shape = []
@@ -73,4 +65,3 @@ for dataset in datasets:
     cfl.writecfl(path+"/"+dataset["name"]+"/ref", move_batchdim(dataset["ref"]))
     cfl.writecfl(path+"/"+dataset["name"]+"/pat", move_batchdim(dataset["pat"]))
     cfl.writecfl(path+"/"+dataset["name"]+"/col", move_batchdim(dataset["col"]))
-    cfl.writecfl(path+"/"+dataset["name"]+"/ksp", move_batchdim(dataset["ksp"]))
