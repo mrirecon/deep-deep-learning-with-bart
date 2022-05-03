@@ -25,7 +25,7 @@ echo "DATA_ARCHIVE is set to $DATA_ARCHIVE"
 export BART_GPU=-g
 
 #path to downloaded data from variational network / MoDL
-echo "VarNet raw-data path is set to ${DATA_PATH_VN_KNEE:=$DATA_ARCHIVE/02_vn_data/raw/}"
+echo "VarNet raw-data path is set to ${DATA_PATH_VN_KNEE:=$DATA_ARCHIVE/02_vn_data/coronal_pd_fs/raw/}"
 echo "MoDL raw-data path is set to ${DATA_PATH_MODL_BRAIN:=$DATA_ARCHIVE/03_modl_data/raw/dataset.hdf5}"
 
 export DATA_PATH_VN_KNEE
