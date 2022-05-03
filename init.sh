@@ -5,6 +5,7 @@ Make sure that BART is in your PATH variable."
 else
 	echo "TOOLBOX_PATH is set to $TOOLBOX_PATH"
 	export PATH=${TOOLBOX_PATH}:${PATH}
+	PYTHONPATH=${PYTHONPATH=}
 	export PYTHONPATH="${TOOLBOX_PATH}/python:$PYTHONPATH"
 fi
 
