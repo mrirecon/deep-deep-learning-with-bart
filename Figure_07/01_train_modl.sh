@@ -1,5 +1,5 @@
 source $REPO/00_data/02_dataset_description/10_brain.sh
-source $REPO/Figure_06/00_time.sh
+source $REPO/Figure_07/00_time.sh
 
 WORKDIR=`mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir'`
 trap 'rm -rf "$WORKDIR"' EXIT
