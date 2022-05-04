@@ -1,8 +1,8 @@
 # Dimensions
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 164 
 # Command
-measure --psnr out /scratch/mblum/bart_nn_data_auto_zenodo//03_modl_data/eval/ref /home/mblum/DeepDeepLearning5/Figure_04b/measures/bart_psnr 
+measure --psnr out /scratch/mblum/ddl_data//03_modl_data/eval/ref /home/mblum/DeepDeepLearning_Fourier/Figure_04b/measures/bart_psnr 
 # Files
- >/home/mblum/DeepDeepLearning5/Figure_04b/measures/bart_psnr </scratch/mblum/bart_nn_data_auto_zenodo//03_modl_data/eval/ref <out
+ >/home/mblum/DeepDeepLearning_Fourier/Figure_04b/measures/bart_psnr </scratch/mblum/ddl_data//03_modl_data/eval/ref <out
 # Creator
-BART v0.7.00-404-g50dce7d
+BART v0.7.00-427-g38d6983

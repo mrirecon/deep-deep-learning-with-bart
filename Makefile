@@ -7,16 +7,19 @@ PLOTS+= Figure_04b/figure_04b_modl
 PLOTS+= Figure_05/figure_05_softsense
 PLOTS+= Figure_06/figure_06_noncart
 PLOTS+= Figure_07/figure_07_timing
-#PLOTS+= Figure_08/figure_08_tensorflow
+PLOTS+= Figure_08/figure_08_tensorflow
 
 default: $(PLOTS:=.png) $(PLOTS:=.pdf)
 clean:
 	rm -f $(PLOTS:=.png)
 	rm -f $(PLOTS:=.pdf)
 	rm -f Figure*/reco*
+	rm -f Sup_Figure_01/sup_figure_01.png
+	rm -f Sup_Figure_01/sup_figure_01.pdf
 
 allclean: clean
 	rm -f Figure_*/measures/measure
+	rm -f Sup_Figure_01/history*
 
 .SECONDARY:Figure_04a/reco Figure_04b/reco Figure_05/reco Figure_06/reco Figure_08/reco
 

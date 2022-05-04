@@ -6,7 +6,7 @@ else
 	echo "TOOLBOX_PATH is set to $TOOLBOX_PATH"
 	export PATH=${TOOLBOX_PATH}:${PATH}
 	PYTHONPATH=${PYTHONPATH=}
-	export PYTHONPATH="${TOOLBOX_PATH}/python:$PYTHONPATH"
+	export PYTHONPATH="${TOOLBOX_PATH}/python:${PYTHONPATH:-}"
 fi
 
 echo "BART at $(which bart) ($(bart version))"

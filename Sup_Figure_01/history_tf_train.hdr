@@ -1,8 +1,8 @@
 # Dimensions
 31 4 300 1 1 1 1 1 1 1 1 1 1 1 1 1 
 # Command
-join 0 meas_0 meas_30 meas_60 meas_90 meas_120 meas_150 meas_180 meas_210 meas_240 meas_270 meas_300 meas_330 meas_360 meas_390 meas_420 meas_450 meas_480 meas_510 meas_540 meas_570 meas_600 meas_630 meas_660 meas_690 meas_720 meas_750 meas_780 meas_810 meas_840 meas_870 meas_900 /home/mblum/DeepDeepLearning5/Sup_Figure_01/history_tf_train 
+join 0 meas_0 meas_30 meas_60 meas_90 meas_120 meas_150 meas_180 meas_210 meas_240 meas_270 meas_300 meas_330 meas_360 meas_390 meas_420 meas_450 meas_480 meas_510 meas_540 meas_570 meas_600 meas_630 meas_660 meas_690 meas_720 meas_750 meas_780 meas_810 meas_840 meas_870 meas_900 /home/mblum/DeepDeepLearning_Fourier/Sup_Figure_01/history_tf_train 
 # Files
- <>/home/mblum/DeepDeepLearning5/Sup_Figure_01/history_tf_train <meas_900 <meas_870 <meas_840 <meas_810 <meas_780 <meas_750 <meas_720 <meas_690 <meas_660 <meas_630 <meas_600 <meas_570 <meas_540 <meas_510 <meas_480 <meas_450 <meas_420 <meas_390 <meas_360 <meas_330 <meas_300 <meas_270 <meas_240 <meas_210 <meas_180 <meas_150 <meas_120 <meas_90 <meas_60 <meas_30 <meas_0
+ <>/home/mblum/DeepDeepLearning_Fourier/Sup_Figure_01/history_tf_train <meas_900 <meas_870 <meas_840 <meas_810 <meas_780 <meas_750 <meas_720 <meas_690 <meas_660 <meas_630 <meas_600 <meas_570 <meas_540 <meas_510 <meas_480 <meas_450 <meas_420 <meas_390 <meas_360 <meas_330 <meas_300 <meas_270 <meas_240 <meas_210 <meas_180 <meas_150 <meas_120 <meas_90 <meas_60 <meas_30 <meas_0
 # Creator
-BART v0.7.00-404-g50dce7d
+BART v0.7.00-427-g38d6983

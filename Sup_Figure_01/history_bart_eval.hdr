@@ -1,8 +1,8 @@
 # Dimensions
 31 4 100 1 1 1 1 1 1 1 1 1 1 1 1 1 
 # Command
-join 0 meas_0 meas_1 meas_2 meas_3 meas_4 meas_5 meas_6 meas_7 meas_8 meas_9 meas_10 meas_11 meas_12 meas_13 meas_14 meas_15 meas_16 meas_17 meas_18 meas_19 meas_20 meas_21 meas_22 meas_23 meas_24 meas_25 meas_26 meas_27 meas_28 meas_29 meas_30 /home/mblum/DeepDeepLearning5/Sup_Figure_01/history_bart_eval 
+join 0 meas_0 meas_1 meas_2 meas_3 meas_4 meas_5 meas_6 meas_7 meas_8 meas_9 meas_10 meas_11 meas_12 meas_13 meas_14 meas_15 meas_16 meas_17 meas_18 meas_19 meas_20 meas_21 meas_22 meas_23 meas_24 meas_25 meas_26 meas_27 meas_28 meas_29 meas_30 /home/mblum/DeepDeepLearning_Fourier/Sup_Figure_01/history_bart_eval 
 # Files
- <>/home/mblum/DeepDeepLearning5/Sup_Figure_01/history_bart_eval <meas_30 <meas_29 <meas_28 <meas_27 <meas_26 <meas_25 <meas_24 <meas_23 <meas_22 <meas_21 <meas_20 <meas_19 <meas_18 <meas_17 <meas_16 <meas_15 <meas_14 <meas_13 <meas_12 <meas_11 <meas_10 <meas_9 <meas_8 <meas_7 <meas_6 <meas_5 <meas_4 <meas_3 <meas_2 <meas_1 <meas_0
+ <>/home/mblum/DeepDeepLearning_Fourier/Sup_Figure_01/history_bart_eval <meas_30 <meas_29 <meas_28 <meas_27 <meas_26 <meas_25 <meas_24 <meas_23 <meas_22 <meas_21 <meas_20 <meas_19 <meas_18 <meas_17 <meas_16 <meas_15 <meas_14 <meas_13 <meas_12 <meas_11 <meas_10 <meas_9 <meas_8 <meas_7 <meas_6 <meas_5 <meas_4 <meas_3 <meas_2 <meas_1 <meas_0
 # Creator
-BART v0.7.00-404-g50dce7d
+BART v0.7.00-427-g38d6983

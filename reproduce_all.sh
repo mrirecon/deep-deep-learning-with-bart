@@ -18,9 +18,6 @@ bash 02_scripts/11_preprocess_vn_data.sh
 python3 02_scripts/12_convert_modl_data.py
 bash 02_scripts/13_preprocess_modl_data.sh
 
-# Deterministic gridding
-export OMP_NUM_THREADS=1
-
 # Train networks
 bash 12_varnet/train_all.sh
 bash 13_modl/train_all.sh
