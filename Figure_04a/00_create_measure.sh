@@ -38,9 +38,10 @@ do
 
     bart fft -u -i 1 ksp cim_os
     bart resize -c 0 320 cim_os cim
-    bart fft -u  1 cim ksp
-
+    bart fft -u  1 cim ksp1
+    
     bart resize -c 0 320 pat1 pat
+    bart fmac ksp1 pat ksp
 
     bart pics -S ${BART_GPU=} -r 0.0025 -l1 -ppat ksp col out_$i
     OUT+=" out_$i"

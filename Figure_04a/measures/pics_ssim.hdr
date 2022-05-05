@@ -5,4 +5,4 @@ measure --ssim out /scratch/mblum/ddl_data//02_vn_data/coronal_pd_fs/eval/ref /h
 # Files
  >/home/mblum/DeepDeepLearning_Fourier/Figure_04a/measures/pics_ssim </scratch/mblum/ddl_data//02_vn_data/coronal_pd_fs/eval/ref <out
 # Creator
-BART v0.7.00-427-g38d6983
+BART v0.7.00-428-g51ed74d
