@@ -137,23 +137,23 @@ def plot(outfile):
 
 
     vn_bart_apply_plain=np.array([
-        38,
+        68,
         29,
-        15,
-        13
+        23,
+        12
     ])/0.1
 
     vn_bart_apply_plain_gpu=np.array([
         6.7/0.21,
         3.4/0.18,
         1.7/0.18,
-        1.3/0.27
+        1.4/0.27
     ])/0.1
 
 
 
     vn_bart_apply_cudnn=np.array([
-        34,
+        35,
         28,
         16,
         14
@@ -169,33 +169,33 @@ def plot(outfile):
 
 
     modl_bart_apply_plain=np.array([
-        28,
+        27,
         21,
         14,
         13
     ])/0.164
 
     modl_bart_apply_plain_gpu=np.array([
-        4.0/0.24,
+        3.9/0.23,
         2.1/0.22,
-        1.1/0.22,
-        0.65/0.21
+        1.1/0.20,
+        0.65/0.20
     ])/0.164
 
 
 
     modl_bart_apply_cudnn=np.array([
-        30,
+        25,
         21,
         14,
-        17
+        16
     ])/0.164
 
     modl_bart_apply_cudnn_gpu=np.array([
-        2.1/0.16,
+        2.2/0.15,
         1.1/0.14,
-        0.57/0.13,
-        0.41/0.14
+        0.57/0.12,
+        0.41/0.13
     ])/0.164
 
 
