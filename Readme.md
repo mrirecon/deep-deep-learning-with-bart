@@ -168,3 +168,6 @@ bart reconet --modl --apply \
 	$DP/valid/ksp $DP/valid/col weights_modl reco_modl
 ```
 
+# Toy Example
+For interested programmers, we have implemented an MNIST-network in BART. It is stripped down to the absolute necessary to train and apply a neural network.
+The source code can be found at `src/mnist.c` in the BART directory or on [GitHub](https://github.com/mrirecon/bart/blob/master/src/mnist.c). In this repository, scripts to download/preprocess the MNIST-dataset and to train/infer the network can be found in this repository in the directory `11_mnist`.
