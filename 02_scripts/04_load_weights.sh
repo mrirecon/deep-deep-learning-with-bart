@@ -15,9 +15,9 @@ download()
 )
 
 cd $REPO/12_varnet
-download https://zenodo.org/record/6520889/files/varnet_weights.zip varnet_weights.zip
+download https://zenodo.org/record/7002209/files/varnet_weights.zip varnet_weights.zip
 unzip -n varnet_weights.zip
 
 cd $REPO/13_modl
-download https://zenodo.org/record/6520889/files/modl_weights.zip modl_weights.zip
+download https://zenodo.org/record/7002209/files/modl_weights.zip modl_weights.zip
 unzip -n modl_weights.zip

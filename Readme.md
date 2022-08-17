@@ -79,7 +79,7 @@ python3 02_scripts/12_preprocess_modl_data.sh
 The preprocessed training data for all experiments requires about 150 GB!
 
 ### Example Data
-We provide the preprocessed example data used for the reconstruction presented in the figures at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6470484.svg)](https://doi.org/10.5281/zenodo.6470484).
+We provide the preprocessed example data used for the reconstruction presented in the figures at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7002209.svg)](https://doi.org/10.5281/zenodo.7002209).
 ```bash
 cd $REPO
 bash 02_scripts/03_load_example_data.sh

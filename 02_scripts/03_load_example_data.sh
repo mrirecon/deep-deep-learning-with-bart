@@ -15,9 +15,9 @@ download()
 )
 
 cd $REPO/00_data/
-download https://zenodo.org/record/6520889/files/example_data.zip example_data.zip
+download https://zenodo.org/record/7002209/files/example_data.zip example_data.zip
 unzip -n example_data.zip
 
 cd $REPO/Figure_07/
-download https://zenodo.org/record/6520889/files/timing_logs.zip timing_logs.zip
+download https://zenodo.org/record/7002209/files/timing_logs.zip timing_logs.zip
 unzip -n timing_logs.zip
