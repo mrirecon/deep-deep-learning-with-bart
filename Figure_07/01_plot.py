@@ -11,7 +11,7 @@ mpl.use('Agg')
 import matplotlib.pyplot as plt
 
 plt.rcParams.update({'font.size': 12})
-width=9.5
+width=9.5*0.8
 
 
 # %%
@@ -52,6 +52,7 @@ def plot(outfile):
         30,
         21
     ])           #in minutes
+
 
     vn_apply_tf=np.array([
         125,
@@ -213,7 +214,7 @@ def plot(outfile):
     ind = np.arange(N)
     barwidth = 0.28
 
-    fig, axes = plt.subplots(2, 2, sharey = True, figsize=(width, width / 2.))
+    fig, axes = plt.subplots(2, 2, sharey = True, figsize=(width, width / 1.5))
 
 
 
@@ -280,11 +281,11 @@ def plot(outfile):
     axes[1][0].set_xlabel('Time [min]')
     axes[1][1].set_xlabel('Time/Slice [ms]')
 
-    axes[0][0].legend(loc='best', prop={'size': 8})
-    axes[1][0].legend(loc='best', prop={'size': 8})
+    axes[0][0].legend(loc='best', prop={'size': 9})
+    axes[1][0].legend(loc='best', prop={'size': 9})
     
-    axes[0][1].legend(loc='best', prop={'size': 8})
-    axes[1][1].legend(loc='best', prop={'size': 8})
+    axes[0][1].legend(loc='best', prop={'size': 9})
+    axes[1][1].legend(loc='best', prop={'size': 9})
     plt.tight_layout()
 
     plt.savefig(outfile, dpi=600)
