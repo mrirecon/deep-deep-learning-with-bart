@@ -10,7 +10,7 @@ mpl.use('Agg')
 import matplotlib.pyplot as plt
 
 plt.rcParams.update({'font.size': 12})
-width=9.5
+width=9.5/1.2
 
 def plot(outfile):
 
@@ -26,23 +26,27 @@ def plot(outfile):
     out_l1e_60_zoom = out_l1e_60[100:-100,50:-50]
     out_tfp_60_zoom = out_tfp_60[100:-100,50:-50]
 
+    out_adj_60 = out_adj_60[40:-40,40:-40]
+    out_l1e_60 = out_l1e_60[40:-40,40:-40]
+    out_tfp_60 = out_tfp_60[40:-40,40:-40]
+
     zoom_ratio = out_adj_60_zoom.shape[0] / out_adj_60_zoom.shape[1]
 
-    fig, axes = plt.subplots(2, 3, tight_layout=True, figsize=(width , width / 2.), gridspec_kw={'height_ratios': [1, zoom_ratio]})
+    fig, axes = plt.subplots(1, 3, tight_layout=True, figsize=(width , width / 2.8))
 
     scale = 0.9
 
-    axes[0,0].set_title("Inverse NuFFT")
-    axes[0,1].set_title("$\ell_1$-Wavelet PICS")
-    axes[0,2].set_title("TensorFlow Prior")
+    axes[0].set_title("Inverse NuFFT")
+    axes[1].set_title("$\ell_1$-Wavelet PICS")
+    axes[2].set_title("TensorFlow Prior")
 
-    axes[1,0].imshow(np.abs(out_adj_60_zoom), extent=[0, 1, 0, zoom_ratio], vmin = 0, vmax=scale, cmap="gray")
-    axes[1,1].imshow(np.abs(out_l1e_60_zoom), extent=[0, 1, 0, zoom_ratio], vmin = 0, vmax=scale, cmap="gray")
-    axes[1,2].imshow(np.abs(out_tfp_60_zoom), extent=[0, 1, 0, zoom_ratio], vmin = 0, vmax=scale, cmap="gray")
+    #axes[1,0].imshow(np.abs(out_adj_60_zoom), extent=[0, 1, 0, zoom_ratio], vmin = 0, vmax=scale, cmap="gray")
+    #axes[1,1].imshow(np.abs(out_l1e_60_zoom), extent=[0, 1, 0, zoom_ratio], vmin = 0, vmax=scale, cmap="gray")
+    #axes[1,2].imshow(np.abs(out_tfp_60_zoom), extent=[0, 1, 0, zoom_ratio], vmin = 0, vmax=scale, cmap="gray")
 
-    axes[0,0].imshow(np.abs(out_adj_60), extent=[0, 1, 0, 1], vmin = 0, vmax=scale, cmap="gray")
-    axes[0,1].imshow(np.abs(out_l1e_60), extent=[0, 1, 0, 1], vmin = 0, vmax=scale, cmap="gray")
-    axes[0,2].imshow(np.abs(out_tfp_60), extent=[0, 1, 0, 1], vmin = 0, vmax=scale, cmap="gray")
+    axes[0].imshow(np.abs(out_adj_60), extent=[0, 1, 0, 1], vmin = 0, vmax=scale, cmap="gray")
+    axes[1].imshow(np.abs(out_l1e_60), extent=[0, 1, 0, 1], vmin = 0, vmax=scale, cmap="gray")
+    axes[2].imshow(np.abs(out_tfp_60), extent=[0, 1, 0, 1], vmin = 0, vmax=scale, cmap="gray")
 
     for ax in axes.flatten():
         ax.set_xticks([])
