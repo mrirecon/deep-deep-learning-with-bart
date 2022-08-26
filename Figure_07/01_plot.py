@@ -30,6 +30,7 @@ def get_time(file):
 def plot(outfile):
 
     gpus = [ "GeForce GTX TITAN X", "TITAN Xp", "Tesla V100-SXM2-32GB", "A100-SXM-80GB"]
+    gpus = [ "TITAN X", "TITAN Xp", "V100", "A100"]
 
     vn_train_tf_old=np.array([
         325,
@@ -133,6 +134,15 @@ def plot(outfile):
         get_time("brain_32_gpu1_cudnn/06_history_multigpu"),
         get_time("brain_32_gpu4_cudnn/06_history_multigpu"),
     ])
+
+    for i in range(4):
+        print(modl_bart_plain_multigpu[i] / modl_bart_plain[i])
+        print(modl_bart_cudnn_multigpu[i] / modl_bart_cudnn[i])
+
+    
+    for i in range(4):
+        print(vn_bart_plain_multigpu[i] / vn_bart_plain[i])
+        print(vn_bart_cudnn_multigpu[i] / vn_bart_cudnn[i])
 
 
 
@@ -270,11 +280,11 @@ def plot(outfile):
     axes[1][0].set_xlabel('Time [min]')
     axes[1][1].set_xlabel('Time/Slice [ms]')
 
-    axes[0][0].legend(loc='best', prop={'size': 7})
-    axes[1][0].legend(loc='best', prop={'size': 7})
+    axes[0][0].legend(loc='best', prop={'size': 8})
+    axes[1][0].legend(loc='best', prop={'size': 8})
     
-    axes[0][1].legend(loc='best', prop={'size': 7})
-    axes[1][1].legend(loc='best', prop={'size': 7})
+    axes[0][1].legend(loc='best', prop={'size': 8})
+    axes[1][1].legend(loc='best', prop={'size': 8})
     plt.tight_layout()
 
     plt.savefig(outfile, dpi=600)
@@ -285,3 +295,4 @@ if __name__ == "__main__":
 
     outfile = sys.argv[1]
     plot(outfile)
+# %%
