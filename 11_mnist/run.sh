@@ -1,3 +1,5 @@
+cd $REPO/11_mnist
+
 # Training
 bart mnist -g -t train_images weights train_labels
 
