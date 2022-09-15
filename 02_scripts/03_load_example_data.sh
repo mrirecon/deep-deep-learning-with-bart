@@ -4,18 +4,6 @@ set -eu
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )
 source ../init.sh
 
-download()
-(
-	URL=$1
-	DST=$2
-
-	if [ ! -f "$DST" ]; then
-		TMPFILE=$(mktemp)
-   		wget -O $TMPFILE $URL
-		mv $TMPFILE $DST
-	fi
-)
-
 cd $REPO/00_data/
 download https://zenodo.org/record/7002209/files/example_data.zip example_data.zip
 unzip -n example_data.zip

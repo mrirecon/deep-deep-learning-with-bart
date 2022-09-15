@@ -43,7 +43,7 @@ Make sure that the environment variable `TOOLBOX_PATH` points to the BART direct
 
 The scripts in this repository make use of environment variables to store the pathes to various datasets:
 * **REPO**: The path to this repository
-* **DATA_ARCHIVE**: The path to a directory containing the preprocessed training data
+* **DATA_DIR**: The path to a directory containing the preprocessed training data
 * **DATA_PATH_VN_KNEE**: The path to a directory containing the downloaded rawdata of the Variational Network
 * **DATA_PATH_MODL_BRAIN** The path to the MoDL raw data *dataset.hdf5*
 
@@ -131,7 +131,7 @@ If you want to train and apply the networks directly in the command line, you ca
 ### Variational Network
 ```bash
 # set path to converted training data
-DP=$DATA_ARCHIVE/02_vn_data/coronal_pd_fs/
+DP=$DATA_DIR/02_vn_data/coronal_pd_fs/
 
 # train
 bart reconet --varnet --train --normalize \
@@ -148,7 +148,7 @@ bart reconet --varnet --apply --normalize \
 ### Modl
 ```bash
 # set path to converted training data
-DP=$DATA_ARCHIVE/03_modl_data/ 
+DP=$DATA_DIR/03_modl_data/ 
 
 # train
 bart reconet --modl --train \

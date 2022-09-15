@@ -157,8 +157,8 @@ join_seq()
 TDIR=`mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir'`
 trap 'rm -rf "$TDIR";' EXIT
 
-mkdir -p $DATA_ARCHIVE/02_vn_data/coronal_pd_fs
-cd $DATA_ARCHIVE/02_vn_data/coronal_pd_fs
+mkdir -p $DATA_DIR/02_vn_data/coronal_pd_fs
+cd $DATA_DIR/02_vn_data/coronal_pd_fs
 
 mkdir -p prep
 

@@ -8,7 +8,7 @@ import os
 import cfl
 import numpy as np
 
-path=os.environ['DATA_ARCHIVE'] + "/03_modl_data/"
+path=os.environ['DATA_DIR'] + "/03_modl_data/"
 os.makedirs(path, exist_ok=True)
 
 #%%

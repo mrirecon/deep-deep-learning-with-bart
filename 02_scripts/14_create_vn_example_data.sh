@@ -6,7 +6,7 @@ source ../init.sh
 
 #Slice Example Reconstruction Data
 
-cd $DATA_ARCHIVE/02_vn_data/coronal_pd_fs
+cd $DATA_DIR/02_vn_data/coronal_pd_fs
 
 EP=$REPO/00_data/01_example_data/01_vn_data/
 mkdir -p $EP

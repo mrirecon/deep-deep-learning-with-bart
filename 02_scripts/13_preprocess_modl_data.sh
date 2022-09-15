@@ -4,7 +4,7 @@ set -eu
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )
 source ../init.sh
 
-cd $DATA_ARCHIVE/03_modl_data/
+cd $DATA_DIR/03_modl_data/
 
 for d in eval/ valid/ train/
 do
