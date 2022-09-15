@@ -1,0 +1,8 @@
+reco_modl_1_1map	0.000001 CFL_NRMSE
+reco_modl_1_2map	0.000001 CFL_NRMSE
+reco_modl_2_1map	0.000001 CFL_NRMSE
+reco_modl_2_2map	0.000001 CFL_NRMSE
+reco_vn_1_1map		0.000001 CFL_NRMSE
+reco_vn_1_2map		0.000001 CFL_NRMSE
+reco_vn_2_1map		0.000001 CFL_NRMSE
+reco_vn_2_2map		0.000001 CFL_NRMSE

@@ -1,0 +1,10 @@
+measures/modl1_psnr	0.000100 CFL_NRMSE
+measures/modl1_ssim	0.000100 CFL_NRMSE
+measures/modl2_psnr	0.000500 CFL_NRMSE
+measures/modl2_ssim	0.000500 CFL_NRMSE
+measures/pics_cg_psnr	0.000100 CFL_NRMSE
+measures/pics_cg_ssim	0.000100 CFL_NRMSE
+measures/pics_l1_psnr	0.000010 CFL_NRMSE
+measures/pics_l1_ssim	0.000010 CFL_NRMSE
+measures/varnet_psnr	0.000500 CFL_NRMSE
+measures/varnet_ssim	0.000500 CFL_NRMSE

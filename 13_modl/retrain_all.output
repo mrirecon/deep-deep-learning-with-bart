@@ -1,0 +1,8 @@
+20201118_183735_knee_default_alias_1map_mse/06_history		0.001000 CFL_NRMSE_EXTRACT 2 1 2 3 1 2
+20201118_183735_knee_default_alias_2map_mse/06_history		0.001000 CFL_NRMSE_EXTRACT 2 1 2 3 1 2
+20201127_191939_brain_10_iter/05_history_one			0.005000 CFL_NRMSE_EXTRACT 2 1 2 3 1 2
+20210129_200343_knee_radial_tick_more_cg_fl_init/06_history	0.020000 CFL_NRMSE_EXTRACT 2 1 2 3 1 2
+20201118_183735_knee_default_alias_1map_mse/05_history_one	0.000050 CFL_NRMSE_EXTRACT 0 0 1 2 1 2 3 1 2
+20201118_183735_knee_default_alias_2map_mse/05_history_one	0.000050 CFL_NRMSE_EXTRACT 0 0 1 2 1 2 3 1 2
+20201127_191939_brain_10_iter/05_history_one			0.001000 CFL_NRMSE_EXTRACT 0 0 1 2 1 2 3 1 2
+20210129_200343_knee_radial_tick_more_cg_fl_init/05_history_one	0.001000 CFL_NRMSE_EXTRACT 0 0 1 2 1 2 3 1 2

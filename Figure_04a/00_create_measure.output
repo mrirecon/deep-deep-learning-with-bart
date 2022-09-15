@@ -1,0 +1,6 @@
+measures/bart_psnr	0.000001 CFL_NRMSE
+measures/bart_ssim	0.000001 CFL_NRMSE
+measures/pics_psnr	0.000001 CFL_NRMSE
+measures/pics_ssim	0.000001 CFL_NRMSE
+measures/tf_psnr	0.000001 CFL_NRMSE
+measures/tf_ssim	0.000001 CFL_NRMSE

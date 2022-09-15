@@ -1,0 +1,8 @@
+measures/modl_1map_psnr	0.000010 CFL_NRMSE
+measures/modl_1map_ssim	0.000010 CFL_NRMSE
+measures/modl_2map_psnr	0.000010 CFL_NRMSE
+measures/modl_2map_ssim	0.000010 CFL_NRMSE
+measures/vn_1map_psnr	0.000010 CFL_NRMSE
+measures/vn_1map_ssim	0.000010 CFL_NRMSE
+measures/vn_2map_psnr	0.000010 CFL_NRMSE
+measures/vn_2map_ssim	0.000010 CFL_NRMSE

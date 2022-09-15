@@ -1,0 +1,6 @@
+reco_adjoint	0.000001 CFL_NRMSE
+reco_modl_one	0.000010 CFL_NRMSE
+reco_modl	0.002000 CFL_NRMSE
+reco_pics	0.000500 CFL_NRMSE
+reco_pics_l1	0.000001 CFL_NRMSE
+reco_varnet	0.000100 CFL_NRMSE
