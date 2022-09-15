@@ -4,6 +4,8 @@ set -eu
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )
 source ../init.sh
 
+./12_convert_modl_data.py
+
 cd $DATA_DIR/03_modl_data/
 
 for d in eval/ valid/ train/
