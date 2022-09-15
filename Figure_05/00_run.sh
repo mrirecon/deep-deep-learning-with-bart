@@ -1,5 +1,8 @@
 #!/bin/bash
+#Copyright 2022. Uecker Lab. University Medical Center Göttingen.
 set -eu
+cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )
+source ../init.sh
 
 #VarNet Reconstruction
 DATA_PATH=$REPO/00_data/01_example_data/02_vn_data_alias/

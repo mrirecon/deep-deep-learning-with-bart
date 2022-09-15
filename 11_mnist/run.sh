@@ -1,4 +1,8 @@
-cd $REPO/11_mnist
+#!/bin/bash
+#Copyright 2022. Uecker Lab. University Medical Center Göttingen.
+set -eu
+cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )
+source ../init.sh
 
 # Training
 bart mnist -g -t train_images weights train_labels

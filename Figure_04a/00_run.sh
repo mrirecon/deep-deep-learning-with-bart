@@ -1,6 +1,8 @@
 #!/bin/bash
+#Copyright 2022. Uecker Lab. University Medical Center Göttingen.
 set -eu
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )
+source ../init.sh
 
 KSP=$REPO/00_data/01_example_data/01_vn_data/ksp
 COL=$REPO/00_data/01_example_data/01_vn_data/col
