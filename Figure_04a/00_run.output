@@ -1,4 +1,4 @@
 reco_adjoint	0.000001 CFL_NRMSE
 reco_bart	0.000001 CFL_NRMSE
-reco_pics	0.000001 CFL_NRMSE
+reco_pics	0.000003 CFL_NRMSE
 reco_tf		0.000001 CFL_NRMSE
