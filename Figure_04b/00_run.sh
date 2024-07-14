@@ -20,7 +20,7 @@ bart fft -u -i 3 $KSP $TMP/tmp_ci
 bart fmac -C -s8 $TMP/tmp_ci $DATA_PATH/tst_coil reco_adjoint
 
 # PICS Reco
-bart pics ${BART_GPU=} -S -r 0.01 -l1 -p$PAT $KSP $COL reco_pics
+bart pics ${BART_GPU=} -S -w 0.372523 -r 0.01 -l1 -p$PAT $KSP $COL reco_pics
 
 # Reconstruction MoDL
 MODEL_PATH=$REPO/13_modl/20201127_191939_brain_10_iter

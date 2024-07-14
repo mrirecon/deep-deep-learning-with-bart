@@ -19,7 +19,7 @@ bart fft -u  1 $TMP/cim $TMP/ksp
 bart resize -c 0 320 $PAT $TMP/pat
 
 #pics reco
-bart pics -S ${BART_GPU=} -r 0.0025 -l1 -p$TMP/pat $TMP/ksp $COL reco_pics
+bart pics -S ${BART_GPU=} -w1.392988e-04 -r 0.0025 -l1 -p$TMP/pat $TMP/ksp $COL reco_pics
 
 #adjoint reco
 bart fft -u -i 3 $KSP $TMP/tmp_ci
