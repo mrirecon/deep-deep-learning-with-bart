@@ -23,12 +23,13 @@ source $MODEL_PATH/00_config.sh
 bart reconet --network=modl --apply -I$ITERATIONS1  ${BART_GPU=} ${NORMALIZE=} $network_opts --trajectory=$TRJ $KSP $COL $MODEL_PATH/10_weights_one reco_modl_one 
 bart reconet --network=modl --apply -I$ITERATIONS2  ${BART_GPU=} ${NORMALIZE=} $network_opts --trajectory=$TRJ $KSP $COL $MODEL_PATH/11_weights reco_modl
 
-# PICS Reconstruction
-bart pics -S -i100 -e -r0.0006 -l1 -t$TRJ ${BART_GPU=} $KSP $COL reco_pics_l1
-bart pics -S -r0.1 -l2 -t$TRJ ${BART_GPU=} $KSP $COL reco_pics
-
 WORKDIR=`mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir'`
 trap 'rm -rf "$WORKDIR"' EXIT
+
+# PICS Reconstruction
+bart ones 3 1 $(bart show -d 1 $KSP) $(bart show -d 2 $KSP) $WORKDIR/pat
+bart pics -S -i100 -e -r0.0006 -l1 -t$TRJ ${BART_GPU=} -p$WORKDIR/pat $KSP $COL reco_pics_l1
+bart pics -S -r0.1 -l2 -t$TRJ ${BART_GPU=} -p$WORKDIR/pat $KSP $COL reco_pics
 
 #Weights for density compensation
 FRE=$(bart show -d 1 $KSP)

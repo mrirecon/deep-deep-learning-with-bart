@@ -57,8 +57,10 @@ do
     bart slice 15 $i $eval_col col
     bart slice 15 $i $eval_ksp ksp
 
-    bart pics -S ${BART_GPU=} -r0.1 -l2 -t$eval_trj ksp col out_cg_$i
-    bart pics -S ${BART_GPU=} -i100 -e -r0.0006 -l1 -t$eval_trj ksp col out_l1_$i
+    bart ones 3 1 $(bart show -d 1 $eval_ksp) $(bart show -d 2 $eval_ksp) pat
+
+    bart pics -S ${BART_GPU=} -p pat -r0.1 -l2 -t$eval_trj ksp col out_cg_$i
+    bart pics -S ${BART_GPU=} -p pat -i100 -e -r0.0006 -l1 -t$eval_trj ksp col out_l1_$i
     OUT_CG+=" out_cg_$i"
     OUT_L1+=" out_l1_$i"
 done
