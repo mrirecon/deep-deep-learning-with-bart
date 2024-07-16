@@ -62,3 +62,4 @@ echo "MoDL raw-data path is set to ${DATA_PATH_MODL_BRAIN:=$DATA_DIR/03_modl_dat
 
 export DATA_PATH_VN_KNEE
 export DATA_PATH_MODL_BRAIN
+export BART_COMPAT_VERSION=v0.8.00
