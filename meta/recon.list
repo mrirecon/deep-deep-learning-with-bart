@@ -5,13 +5,13 @@
 ./Figure_05/00_run.sh
 ./Figure_06/00_run.sh
 ./Figure_08/00_run.sh
-./02_scripts/01_load_vn_data.sh
-./02_scripts/02_load_modl_data.sh
-./02_scripts/11_preprocess_vn_data.sh
-./02_scripts/13_preprocess_modl_data.sh
-./Figure_04a/00_create_measure.sh
-./Figure_04b/00_create_measure.sh
-./Figure_05/00_create_measure.sh
-./Figure_06/00_create_measure.sh
-./12_varnet/retrain_all.sh
-./13_modl/retrain_all.sh
+./02_scripts/01_load_vn_data.sh		::very-long::
+./02_scripts/02_load_modl_data.sh	::very-long::
+./02_scripts/11_preprocess_vn_data.sh	::very-long::
+./02_scripts/13_preprocess_modl_data.sh	::very-long::
+./Figure_04a/00_create_measure.sh	::very-long::
+./Figure_04b/00_create_measure.sh	::very-long::
+./Figure_05/00_create_measure.sh	::very-long::
+./Figure_06/00_create_measure.sh	::very-long::
+./12_varnet/retrain_all.sh		::very-long::
+./13_modl/retrain_all.sh		::very-long::
