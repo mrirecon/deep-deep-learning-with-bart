@@ -18,8 +18,8 @@ bart rss 8 $eval_col scl
 
 MODEL_PATH=$REPO/12_varnet/20201117_164101_radial_tick/
 (
-    source $MODEL_PATH/00_config.sh    
-    
+    source $MODEL_PATH/00_config.sh
+
     bart reconet --network=varnet --apply -I$ITERATIONS  ${BART_GPU=} ${NORMALIZE=} $network_opts --trajectory=$eval_trj $eval_ksp $eval_col $MODEL_PATH/11_weights out1
     bart fmac out1 scl out
 
@@ -29,8 +29,8 @@ MODEL_PATH=$REPO/12_varnet/20201117_164101_radial_tick/
 
 MODEL_PATH=$REPO/13_modl/20210129_200343_knee_radial_tick_more_cg_fl_init/
 (
-    source $MODEL_PATH/00_config.sh    
-    
+    source $MODEL_PATH/00_config.sh
+
     bart reconet --network=modl --apply -I$ITERATIONS1  ${BART_GPU=} ${NORMALIZE=} $network_opts --trajectory=$eval_trj $eval_ksp $eval_col $MODEL_PATH/10_weights_one out1
     bart fmac out1 scl out
 
@@ -40,8 +40,8 @@ MODEL_PATH=$REPO/13_modl/20210129_200343_knee_radial_tick_more_cg_fl_init/
 
 MODEL_PATH=$REPO/13_modl/20210129_200343_knee_radial_tick_more_cg_fl_init/
 (
-    source $MODEL_PATH/00_config.sh    
-    
+    source $MODEL_PATH/00_config.sh
+
     bart reconet --network=modl --apply -I$ITERATIONS2  ${BART_GPU=} ${NORMALIZE=} $network_opts --trajectory=$eval_trj $eval_ksp $eval_col $MODEL_PATH/11_weights out1
     bart fmac out1 scl out
 
@@ -49,6 +49,10 @@ MODEL_PATH=$REPO/13_modl/20210129_200343_knee_radial_tick_more_cg_fl_init/
     bart measure --psnr out $eval_ref $OUT_PATH/measures/modl2_psnr
 )
 
+PICS_ADD_OPTS=""
+if bart pics --interface 2>&1 | grep -q fista_last >/dev/null 2>&1 ; then
+	PICS_ADD_OPTS="--fista_last"
+fi
 
 OUT_CG=""
 OUT_L1=""
@@ -60,7 +64,7 @@ do
     bart ones 3 1 $(bart show -d 1 $eval_ksp) $(bart show -d 2 $eval_ksp) pat
 
     bart pics -S ${BART_GPU=} -p pat -r0.1 -l2 -t$eval_trj ksp col out_cg_$i
-    bart pics -S ${BART_GPU=} -p pat -i100 -e -r0.0006 -l1 -t$eval_trj ksp col out_l1_$i
+    bart pics -S ${BART_GPU=} -p pat -i100 -e -r0.0006 -l1 $PICS_ADD_OPTS -t$eval_trj ksp col out_l1_$i
     OUT_CG+=" out_cg_$i"
     OUT_L1+=" out_l1_$i"
 done

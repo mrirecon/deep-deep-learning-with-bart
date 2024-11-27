@@ -16,7 +16,7 @@ cd $WORKDIR
 MODEL_PATH=$REPO/12_varnet/20201117_164101_default/
 
 source $MODEL_PATH/00_config.sh
-    
+
 bart rss 8 $eval_col scl
 
 bart reconet --network=varnet --apply -I$ITERATIONS  ${BART_GPU=} ${NORMALIZE=} $network_opts --pattern=$eval_pat $eval_ksp $eval_col $MODEL_PATH/11_weights out1
@@ -32,6 +32,11 @@ bart fmac out1 scl out
 bart measure --ssim out $eval_ref $OUT_PATH/measures/tf_ssim
 bart measure --psnr out $eval_ref $OUT_PATH/measures/tf_psnr
 
+PICS_ADD_OPTS=""
+if bart pics --interface 2>&1 | grep -q fista_last >/dev/null 2>&1 ; then
+	PICS_ADD_OPTS="--fista_last"
+fi
+
 OUT=""
 for i in $(seq 0 $(($(bart show -d 15 $eval_ref)-1)))
 do
@@ -42,11 +47,11 @@ do
     bart fft -u -i 1 ksp cim_os
     bart resize -c 0 320 cim_os cim
     bart fft -u  1 cim ksp1
-    
+
     bart resize -c 0 320 pat1 pat
     bart fmac ksp1 pat ksp
 
-    bart pics -S ${BART_GPU=} -r 0.0025 -l1 -ppat ksp col out_$i
+    bart pics -S ${BART_GPU=} -r 0.0025 -l1 $PICS_ADD_OPTS -ppat ksp col out_$i
     OUT+=" out_$i"
 done
 bart join 15 $OUT out1

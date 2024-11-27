@@ -18,8 +18,13 @@ bart resize -c 0 320 $TMP/cim_os $TMP/cim
 bart fft -u  1 $TMP/cim $TMP/ksp
 bart resize -c 0 320 $PAT $TMP/pat
 
+PICS_ADD_OPTS=""
+if bart pics --interface 2>&1 | grep -q fista_last >/dev/null 2>&1 ; then
+	PICS_ADD_OPTS="--fista_last"
+fi
+
 #pics reco
-bart pics -S ${BART_GPU=} -w1.392988e-04 -r 0.0025 -l1 -p$TMP/pat $TMP/ksp $COL reco_pics
+bart pics -S ${BART_GPU=} -w1.392988e-04 -r 0.0025 -l1 $PICS_ADD_OPTS -p$TMP/pat $TMP/ksp $COL reco_pics
 
 #adjoint reco
 bart fft -u -i 3 $KSP $TMP/tmp_ci

@@ -21,9 +21,14 @@ weights=$MODEL_PATH/11_weights
 bart reconet --network=modl --apply -I$ITERATIONS2  ${BART_GPU=} ${NORMALIZE=} $network_opts --pattern=$eval_pat $eval_ksp $eval_col $MODEL_PATH/11_weights out1
 bart rss 8 $eval_col scl
 bart fmac out1 scl out
-    
+
 bart measure --ssim out $eval_ref $OUT_PATH/measures/bart_ssim
 bart measure --psnr out $eval_ref $OUT_PATH/measures/bart_psnr
+
+PICS_ADD_OPTS=""
+if bart pics --interface 2>&1 | grep -q fista_last >/dev/null 2>&1 ; then
+	PICS_ADD_OPTS="--fista_last"
+fi
 
 OUT=""
 for i in $(seq 0 $(($(bart show -d 15 $eval_ref)-1)))
@@ -32,7 +37,7 @@ do
     bart slice 15 $i $eval_col col
     bart slice 15 $i $eval_ksp ksp
 
-    bart pics -S ${BART_GPU=} -r 0.01 -l1 -ppat ksp col out_$i
+    bart pics -S ${BART_GPU=} -r 0.01 -l1 $PICS_ADD_OPTS -ppat ksp col out_$i
     OUT+=" out_$i"
 done
 bart join 15 $OUT out1

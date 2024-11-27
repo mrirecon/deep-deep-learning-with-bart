@@ -15,20 +15,25 @@ TRJ=$DATA_PATH/trj
 #VarNet Reconstruction
 MODEL_PATH=$REPO/12_varnet/20201117_164101_radial_tick/
 source $MODEL_PATH/00_config.sh
-bart reconet --network=varnet --apply -I$ITERATIONS  ${BART_GPU=} ${NORMALIZE=} $network_opts --trajectory=$TRJ $KSP $COL $MODEL_PATH/11_weights reco_varnet 
+bart reconet --network=varnet --apply -I$ITERATIONS  ${BART_GPU=} ${NORMALIZE=} $network_opts --trajectory=$TRJ $KSP $COL $MODEL_PATH/11_weights reco_varnet
 
 # MoDL Reconstruction
 MODEL_PATH=$REPO/13_modl/20210129_200343_knee_radial_tick_more_cg_fl_init/
 source $MODEL_PATH/00_config.sh
-bart reconet --network=modl --apply -I$ITERATIONS1  ${BART_GPU=} ${NORMALIZE=} $network_opts --trajectory=$TRJ $KSP $COL $MODEL_PATH/10_weights_one reco_modl_one 
+bart reconet --network=modl --apply -I$ITERATIONS1  ${BART_GPU=} ${NORMALIZE=} $network_opts --trajectory=$TRJ $KSP $COL $MODEL_PATH/10_weights_one reco_modl_one
 bart reconet --network=modl --apply -I$ITERATIONS2  ${BART_GPU=} ${NORMALIZE=} $network_opts --trajectory=$TRJ $KSP $COL $MODEL_PATH/11_weights reco_modl
 
 WORKDIR=`mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir'`
 trap 'rm -rf "$WORKDIR"' EXIT
 
+PICS_ADD_OPTS=""
+if bart pics --interface 2>&1 | grep -q fista_last >/dev/null 2>&1 ; then
+	PICS_ADD_OPTS="--fista_last"
+fi
+
 # PICS Reconstruction
 bart ones 3 1 $(bart show -d 1 $KSP) $(bart show -d 2 $KSP) $WORKDIR/pat
-bart pics -S -i100 -e -r0.0006 -l1 -t$TRJ ${BART_GPU=} -p$WORKDIR/pat $KSP $COL reco_pics_l1
+bart pics -S -i100 -e -r0.0006 -l1 $PICS_ADD_OPTS -t$TRJ ${BART_GPU=} -p$WORKDIR/pat $KSP $COL reco_pics_l1
 bart pics -S -r0.1 -l2 -t$TRJ ${BART_GPU=} -p$WORKDIR/pat $KSP $COL reco_pics
 
 #Weights for density compensation
